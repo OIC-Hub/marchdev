@@ -8,10 +8,26 @@
 </head>
 <body>
     <input type="text" name="" id="output">
-    <button onclick="document.getElementById('output').value +='1'" > 1 </button>
-    <button onclick="document.getElementById('output').value +='2'" > 2 </button>
+    <button onclick="one()"> 1 </button>
+    <button onmouseover="two()"> 2 </button>
     <button onclick="document.getElementById('output').value +='+'" > + </button>
     <button onclick="document.getElementById('output').value +='-'" > - </button>
+    <button onclick="deleteCal()"> C </button>
     <button onclick="document.getElementById('output').value = eval(document.getElementById('output').value)" > = </button>
+
+
+<script>
+    function one(){
+        document.getElementById('output').value +='1' 
+    }
+
+    function two(){
+        document.getElementById('output').value +='2'
+    }
+
+    function deleteCal(){
+        document.getElementById('output').value=""
+    }
+</script>
 </body>
 </html>

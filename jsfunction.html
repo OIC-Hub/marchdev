@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+</head>
+<body>
+    <p id="welcome" onmouseover="welcome()">Magic Text</p>
+    <p>The sum of your numbers = <b id="sum"></b></p>
+    <script>
+      /*
+      function functionname(parameters){
+        //codes
+      }
+      */
+     function welcome(){
+        let firstName = "Sunday";
+        let lastName = "Omolewu";
+            document.getElementById('welcome').innerHTML = "Welcome to our office " + firstName + " " + lastName;
+     }
+
+    
+    //  function sum(a, b){
+    //     console.log(a + b)
+    //       console.log(c)
+    //  }
+    //  sum(47, 78)
+
+//return key word
+
+function sum(a=0, b=89){
+    let c = a+ b;
+    return c
+}
+
+console.log(sum())
+ document.getElementById('sum').innerHTML= sum(345667, 67)
+ 
+   
+     
+     
+    </script>
+</body>
+</html>
