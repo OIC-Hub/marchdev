@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <h2 id="welcome"></h2>
+    <input oninput="getScore()" type="text"  id="score">
+<script>
+    /* If Statement */
+//     let a = '45'
+//     let firstName = "Sunday"
+// if(a != 4 && firstName == "Sunday" ){
+// document.getElementById('welcome').innerHTML="Welcome to day 6 javascript class, " + firstName;
+// }
+
+/*   else if */
+
+// let score = 50 ;
+// if(score >= 70 && score <= 100){
+//     console.log('You score A')
+// }else if(score >= 60 && score <= 69){
+//     console.log('You score B')
+// }else if(score >= 50 && score <= 59){
+//     console.log('You score C')
+// }else if(score >= 45 && score <= 49){
+//     console.log('You score D')
+// }else if(score >= 40 && score <= 44){
+//     console.log('You score E')
+// }else if(score >100 || score < 0){
+//     console.log('Invalid score')
+// }
+// else{
+//     console.log('You fail')
+// }
+
+
+function getScore(){
+ let score = document.getElementById('score').value
+   console.log(score)
+}
+
+</script>
+</body>
+</html>
