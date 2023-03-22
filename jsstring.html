@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript String</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="story"></p>
+    <p id="qoute"></p>
+    <script>
+        let title = `Hello World`;
+    let qoute= "\"If ${title} you don\'t have a goal you are not better than a goat\""
+//    let story ="A long time ago in a country " + 
+//    "far away from Nigeria..." ;
+
+let story =` ${title} ${title} A long  ${title}time 
+ago in a country  
+   "far away 
+    from Nigeria... ${qoute}`;
+
+
+    document.getElementById('qoute').innerHTML=qoute
+    document.getElementById('story').innerHTML=story;
+    </script>
+</body>
+</html>
