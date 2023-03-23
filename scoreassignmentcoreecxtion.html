@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System</title>
+</head>
+<body>
+      <p>Name: <b id="outputname"> </b></p>
+      <p>Level: <b id="outputlevel"> </b></p>
+      <p>Grade: <b id="outputgrade"></b></p>
+
+    <p>
+        <label for="name">Name</label>
+        <input type="text" name="" id="name">
+    </p>
+    <p>
+        <label for="name">Level</label>
+        <input type="text" name="" id="level">
+    </p>
+    <p>
+        <label for="name">Score</label>
+        <input type="text" oninput="getUser()" id="score">
+    </p>
+    <script>
+        function getUser(){
+       let name = document.getElementById('name').value;
+       let level = document.getElementById('level').value;
+       let score = document.getElementById('score').value;
+       let outputscore;
+    if(score >= 70 && score <= 100){
+        outputscore= "You score A"
+}else if(score >= 60 && score <= 69){
+    outputscore= 'You score B'
+}else if(score >= 50 && score <= 59){
+    outputscore='You score C'
+}else if(score >= 45 && score <= 49){
+    outputscore='You score D'
+}else if(score >= 40 && score <= 44){
+    outputscore='You score E'
+}else if(score >100 || score < 0){
+    outputscore='Invalid score'
+}
+else{
+    outputscore='You fail'
+}
+
+document.getElementById('outputname').innerHTML=name;
+document.getElementById('outputlevel').innerHTML=level;
+document.getElementById('outputgrade').innerHTML=outputscore;
+
+
+
+    }
+    </script>
+</body>
+</html>
