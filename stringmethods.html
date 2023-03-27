@@ -17,9 +17,62 @@
 //   let firstName = name.slice(7) // Extract from index 7 till end
 //let firstName = name.slice(0, 6) // extract Sunday
 // let firstName = name.slice(0, name.length-1)
-let firstName = name.slice(0, -1)
-
+let firstName = name.slice(0, -1) 
 console.log(firstName)
-    </script>
+
+//strstring(start(index), end(index))
+ let color = 'blue';
+ let newcolor = color.substring(1, 4)
+ console.log(newcolor);
+
+ //strstr(start(index), length)
+ let phone ="Tecno Phone is beautiful, Oh! my Tecno Phone";
+ let tecno=phone.substr(6, 4)
+ console.log(tecno)   
+// replace()
+ let myphone = phone.replace('Tecno', 'Samsung')
+  console.log(myphone);
+
+  // replaceAll()
+  console.log(phone.replaceAll('Tecno', 'Samsung'))
+   
+  // trim()
+   let company  = "      OIC Hub LTD      "
+//    console.log(company.trim())
+// console.log(company.trimStart())
+console.log(company.trimEnd())
+
+// padStart()
+let num = '5';
+// console.log(num.padStart(4, 'X'))
+
+
+// padEnd()
+console.log(num.padEnd(2, 'X'))
+
+//indeof()
+let phoneNumber= 
+'Hello World, %  My p hone number is 08102519926 phone'
+console.log(phoneNumber.indexOf('p', 20))
+let email ="sunday@oichub.com"
+// if(email.indexOf('@') != -1 &&
+//  email.indexOf('.') != -1  ){
+    
+//  }else{
+       
+//  }
+
+// lastIndexOf
+
+console.log(phoneNumber.lastIndexOf('phone'))
+  
+// search()
+console.log(phoneNumber.search(/phone/i))
+
+// match()
+console.log(phoneNumber.match(/phone/ig))
+// matchAll()
+console.log(phoneNumber.matchAll('phone'))
+  </script>
 </body>
 </html>
