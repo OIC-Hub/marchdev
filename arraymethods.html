@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nums =[12, 34, 67, 78,90];
+        // length
+         console.log(nums.length)
+         // pop()
+         nums.pop()
+         nums.pop()
+         nums.pop()
+         console.log(nums)
+         //push()
+         nums[2]=34
+        //  nums[nums.length]=34;
+         nums.push(23) // Adding single element
+         nums.push(45, 45, 67, 78) // Adding multiple element
+         nums.push([23, [56, 67], 78]) // Adding array inside an array
+         console.log(nums)
+
+         // shift()
+         const names=['ojo', 'Dotun', 'Jacob', 'Daniel', 'Wale']
+         names.shift()
+         console.log(names)
+         //unshift()
+         names.unshift('Aminat')
+         names.unshift(['Warisi', 'Usman'])
+         console.log(names)
+         // slice()
+         let newnames=names.slice(0, 4)
+         console.log(newnames)
+        //splice()
+        // names.splice(2, 2, 'Ade', 'Ope')
+        names.splice(2, 0, 'Ade', 'Ope')
+        console.log(names)
+//sort()
+const cities= ['Lagos', 'Abuja', 'Ibadan', 'Jos']
+    cities.sort()
+    console.log(cities)
+    const numbers=[23,100,  45, 78, 200,  90];
+    // numbers.sort(function(a, b){
+    //  return a-b
+    // })
+
+    // numbers.sort(function(a, b){
+    //  return b-a
+    // })
+    // const sortedNums=(a, b)=>{
+    //     return a-b
+    // }
+    // const sortedNums=(a, b)=> a-b
+   
+    // numbers.sort(sortedNums)
+
+    
+    numbers.sort((a,b)=>{
+      return  a-b
+    }
+        )
+   
+    // function sortedNum(a, b){
+    //  return a-b
+    // }
+    console.log(numbers)
+
+
+    </script>
+</body>
+</html>
