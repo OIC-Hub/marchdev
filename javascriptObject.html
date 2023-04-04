@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    
+    <script>
+        const user = {
+              name: 'Sunday',
+              age:23,
+               address:'Osogbo',
+               isMarried: true,
+            socialMedia: ['twitter', 'facebook', 'Linkedin']
+        };
+       console.log(user['name'])
+     console.log(user['address'])
+    console.log(user.socialMedia[2])
+    //Other Way
+    console.log(user['socialMedia'][2])
+
+    const users = [
+        {name:'Sunday Opeyemi ', age: 12, address:'Lagos', socialMedia:['twitter']},
+        {name:'Ojo', age: 23, address:'Osogbo', socialMedia:['twitter', 'facebook']},
+        {name:'Kabir', age: 40, address:'Ibadan', socialMedia:['twitter', 'facebook', 'linkedin']},
+
+    ]
+
+    let user2socialmedia=users[1].socialMedia
+       user2socialmedia.push('Instagram')
+    // users[1].socialMedia.push('Instagram')
+    console.log(users)
+    </script>
+</body>
+</html>
