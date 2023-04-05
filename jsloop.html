@@ -46,7 +46,72 @@ for(let i =1; i <= 100; i++){
 }
 console.log(nums)
 
+// while loop
 
-    </script>
+/* 
+  syntax
+  while(comparison){
+    //code
+  }
+*/
+let i =1
+let whileNums=""
+while(i <=100){
+   whileNums += i + "\n"
+   i++
+}
+
+const itemsC =[]
+const items =['phone', 'laptop', 'bag', 'book'];
+
+for(let i =0; i< items.length; i++){
+    if(items[i] != 'bag'){
+    itemsC[i] = items[i].toUpperCase()
+}else{
+    itemsC[i] = items[i]
+}
+}
+console.log(itemsC)
+//detfrrr 
+console.log(whileNums)
+
+// Do While Loop
+let sn =1
+let text = ''
+do{
+     text += sn
+     sn++
+}while(sn < 10)
+
+console.log(text)
+
+//for Of
+
+const names = ['Opeyemi', 'Sunday', 'James', 'Yakubu', 'Aiyegbeni', 'John']
+let listOfNames=''  
+for(let name of names){
+
+    listOfNames += name + '\n'
+}
+console.log(listOfNames)
+   
+// for in
+ 
+const user ={name:'Sunday', address:'Osogbo', age: 34};
+let userdetails = []
+let userId =0
+for(let u  in user) {
+  if(user[u] == 'Osogbo'){
+    userdetails[userId]=  user[u].toLowerCase()
+  }else{
+    userdetails[userId]=user[u]
+  }
+  userId++
+}
+console.log(userdetails)
+  // Class Work
+  
+
+</script>
 </body>
 </html>
