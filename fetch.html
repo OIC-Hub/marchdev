@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <di>
+        <form >
+        <input type="search" name="" id="dic">
+        <p><input type="submit" value="Search"></p>
+    </form>
+    </di>
+    <div id="blog">
+
+    </di>
+    <script>
+        let form =document.forms[0];
+        form.addEventListener('submit', searchDic)
+        function searchDic(e){
+            e.preventDefault()
+            let word = document.getElementById('dic').value;
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+        .then(response => response.json())
+        .then(response=>{
+           console.log(response)
+        }).catch(err => console.log(err))
+    }
+
+//         fetch("http://localhost:8000/posts")
+//         .then(function(result){
+//              return result.json()
+//         }).then(data =>{
+//             let blog=""
+//              for(let post of data){
+//              blog +=  `<div style="margin:2% ">
+//                     <h3> ${post.title} </h3
+//                         <div>
+//                           <img src="${post.picture.path}" alt="${post.title}"> 
+//                             </div>
+                
+//                     </div>
+//                 `
+//              }
+// document.getElementById('blog').innerHTML=blog
+
+//         }).catch(err =>{
+//             console.log(err)
+//         })
+    </script>
+</body>
+</html>

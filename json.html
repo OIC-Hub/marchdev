@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Class</title>
+</head>
+<body>
+    
+    <h2 id="title"></h2>
+     <p>Definition: <b id="definition"></b></p>
+     <p>part of speech: <span id="partOfSpeech"></span></p>
+    <script>
+   let users=  '{"name": "Sunday", "age":12, "isBlack": true, "socialmedia": ["Twitter", "Faceboo", "Linkedin"]}'
+     console.log(users)
+   let usersObject = JSON.parse(users)
+    console.log(usersObject)
+  let userjson = JSON.stringify(usersObject)
+  console.log(userjson)
+
+
+ let dicWord = ` [
+    {
+      "word": "hello",
+      "phonetic": "hələʊ",
+      "phonetics": [
+        {
+          "text": "hələʊ",
+          "audio": "//ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3"
+        },
+        {
+          "text": "hɛləʊ"
+        }
+      ],
+      "origin": "early 19th century: variant of earlier hollo ; related to holla.",
+      "meanings": [
+        {
+          "partOfSpeech": "exclamation",
+          "definitions": [
+            {
+              "definition": "used as a greeting or to begin a phone conversation.",
+              "example": "hello there, Katie!",
+              "synonyms": [],
+              "antonyms": []
+            }
+          ]
+        },
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            {
+              "definition": "an utterance of hello; a greeting.",
+              "example": "she was getting polite nods and hellos from people",
+              "synonyms": [],
+              "antonyms": []
+            }
+          ]
+        },
+        {
+          "partOfSpeech": "verb",
+          "definitions": [
+            {
+              "definition": "say or shout hello.",
+              "example": "I pressed the phone button and helloed",
+              "synonyms": [],
+              "antonyms": []
+            }
+          ]
+        }
+      ]
+    }
+  ]`
+
+ let word=JSON.parse(dicWord) 
+ let title = word[0].word
+ let definition= word[0].meanings[0].definitions[0].definition
+ let partOfSpeech = word[0].meanings[0].partOfSpeech
+
+ document.getElementById('title').innerHTML= title
+ document.getElementById('definition').innerHTML= definition
+ document.getElementById('partOfSpeech').innerHTML= partOfSpeech
+   </script>
+</body>
+</html>
