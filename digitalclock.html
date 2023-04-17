@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="word"></h2>
+      <h1>Current Date: <span id="time"></span></h1>
+    <script>
+         document.querySelector('#word').innerHTML="Welcome to magic world"
+          
+        //  setTimeout(()=>{
+        // //  window.location="/index.html"
+        // }, 5000)
+        setInterval(()=>{
+         let currentDate = new Date()
+         let hours = currentDate.getHours();
+         let minutes = currentDate.getMinutes();
+         let seconds = currentDate.getSeconds()
+         document.getElementById('time').innerHTML=` ${hours}: ${minutes} : ${seconds}`
+        }, 1000)
+
+        localStorage.setItem("product", 'Pen')
+        console.log(localStorage.getItem("product"))
+        localStorage.clear()
+    </script>
+</body>
+</html>

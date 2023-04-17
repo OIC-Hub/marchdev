@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Hello One</div>
+    <p class="oic">How are you?</p>
+    <div id="oic" class="oic">Hello Two</div>
+    <p>My name is sunday</p>
+    <div class="oic">Hello Three</div>
+    <script>
+        //Tags Name
+let divs= document.getElementsByTagName('p')
+ for(let div of divs){
+    console.log(div)
+ }
+console.log(divs)
+
+//  document.getElementsByClassName('oic')[0].innerHTML="Getting element bay Class"
+let oic=document.getElementsByClassName('oic');
+for(let i of oic){
+    i.innerHTML="Getting element by Class Name"
+}
+
+let classoic= document.querySelectorAll('.oic')
+   console.log(classoic.length);
+classoic[0].innerHTML="I'm diff"
+   console.log(classoic)
+
+   for(let i =0; i<classoic.length; i++){
+         console.log(classoic[i])
+   }
+
+ document.querySelector('#oic').innerHTML='I got this element through query selector, using Id'
+    </script>
+</body>
+</html>
