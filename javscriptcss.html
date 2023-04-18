@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript class, css  and attribute</title>
+    <style>
+        .main{
+            width: 30%;
+           
+        }
+    .response{
+    width:150px;
+    height:auto
+}
+
+  .appear{
+    background-color: black;
+    color:white;
+    padding: 5%
+  }
+    </style>
+
+</head>
+
+<body>
+    <h2>Javascript class, css and attribute</h2>
+    <div class="appear" id="app">
+        Hello Javascript
+    </div>
+    <div class="main">
+      <img src="images/offbulb.png" class="response" alt="" >
+      <button onclick="off()">Off</button> <br>
+      <button onclick="on()">On</button>
+    </div>
+
+    <div class="dice">
+        <img src="images/1.png" alt="Bulb" id="dice">
+        <p>
+            <button onclick="play()">Play</button>
+        </p>
+    </div>
+    <script>
+document.querySelector('#app').removeAttribute('class')
+        function play(){
+            let rand = Math.floor(Math.random() * 7)
+              if(rand == 0){
+                 rand =1
+              }
+            document.querySelector('#dice').src = `images/${rand}.png`
+             
+        }
+        function on(){
+        let bulb = document.getElementsByClassName('response')[0];
+
+        bulb.removeAttribute('alt')
+    //    console.log(bulb.getAttribute('src'))
+    if(bulb.getAttribute('src') == 'images/offbulb.png' ){
+        bulb.setAttribute('src', 'images/onbulb.jpg') 
+    }else{
+        bulb.setAttribute('src', 'images/offbulb.png')
+    }
+            
+        //  bulb.src="images/onbulb.jpg"
+        }
+        function off(){
+         document.getElementsByClassName('response')[0].src="images/offbulb.png"
+        }
+         </script>
+</body>
+</html>
