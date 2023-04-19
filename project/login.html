@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Login </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div id="loggedin"></div>
+            <div id="loginErr" style="color:red"></div>
+            <form name="login">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" name="email" id="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="" class="form-control">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+      let form= document.forms['login'];
+  form.addEventListener('submit', (e)=>{
+     e.preventDefault()
+    let email = form['email'].value.trim()
+    let password= form['password'].value.trim()
+    const errors={}
+    if(email ==""){
+        errors['emailErr'] = "Your email is required"
+      }
+      if(password == ""){
+        errors['passwordErr'] = "Your password is required"
+      }
+        if(Object.keys(errors).length == 0){
+            if(localStorage.getItem('users')){
+             const users = JSON.parse(localStorage.getItem('users'))
+             const auth = users.filter((value, index)=>{
+                return (value.email == email && value.password == password)
+             })
+               if(auth.length == 0){
+                 document.querySelector('#loginErr').innerHTML="Either Password or Email was not correct"
+
+               }else{
+               let loggedin= document.getElementById('loggedin')
+               loggedin.innerHTML ="User Loggedin successfully";
+               loggedin.style.color="white"
+               loggedin.style.backgroundColor="green"
+               loggedin.style.fontSize="26px"
+               setTimeout(()=>{
+                 window.location ='../index.html'
+               }, 5000)
+               }
+
+            }else{
+                console.log('No user available')
+            }
+        }else{
+           
+            let displayErrs=""
+            for(let error in errors){
+                displayErrs += errors[error] + "<br>"
+            }
+            document.querySelector('#loginErr').innerHTML=displayErrs
+        }
+    })
+</script>
+</body>
+</html>
